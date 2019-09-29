@@ -646,6 +646,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
     //===================================================================
+    /*
     @Override
     protected void onSaveInstanceState( @NonNull  Bundle bundle){
         super.onSaveInstanceState(bundle);
@@ -663,6 +664,7 @@ public class MainActivity extends AppCompatActivity {
         chronometer3.setBase(b.getLong("chrono3",0) - SystemClock.elapsedRealtime());
         chronometer4.setBase(b.getLong("chrono4",0) - SystemClock.elapsedRealtime());
     }
+    */
     //=====================================================================
 
     @Override
