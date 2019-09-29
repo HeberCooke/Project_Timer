@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Chronometer
+        android:id="@+id/chronometer4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorGreen"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvTotalTime4"
+        app:layout_constraintEnd_toStartOf="@+id/divider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hDivider3" />
+
+    <Chronometer
+        android:id="@+id/chronometer3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorGreen"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toStartOf="@+id/divider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hDivider2" />
+
+    <TextView
+        android:id="@+id/tvName4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="@string/name"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/divider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTotalTime4" />
+
+    <TextView
+        android:id="@+id/tvName3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="@string/name"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/hDivider3"
+        app:layout_constraintEnd_toStartOf="@+id/divider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTotalTime3" />
+
+    <Button
+        android:id="@+id/btnStartStop4"
+        android:layout_width="65dp"
+        android:layout_height="34dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/btnStart"
+        android:textAlignment="center"
+        android:textColor="@color/colorGreen"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnReset4" />
+
+    <Button
+        android:id="@+id/btnReset4"
+        android:layout_width="65dp"
+        android:layout_height="34dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/btnReset"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnStartStop4"
+        app:layout_constraintStart_toEndOf="@+id/btnSetTimer4" />
+
+    <Button
+        android:id="@+id/btnSetTimer4"
+        android:layout_width="50dp"
+        android:layout_height="34dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/btnSet"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnReset4"
+        app:layout_constraintStart_toEndOf="@+id/divider" />
+
+    <Button
+        android:id="@+id/btnStartStop3"
+        android:layout_width="65dp"
+        android:layout_height="34dp"
+        android:text="@string/btnStart"
+        android:textAlignment="center"
+        android:textColor="@color/colorGreen"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/hDivider3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnReset3" />
+
+    <Button
+        android:id="@+id/btnReset3"
+        android:layout_width="65dp"
+        android:layout_height="34dp"
+        android:text="@string/btnReset"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/hDivider3"
+        app:layout_constraintEnd_toStartOf="@+id/btnStartStop3"
+        app:layout_constraintStart_toEndOf="@+id/btnSetTimer3" />
+
+    <Button
+        android:id="@+id/btnSetTimer3"
+        android:layout_width="50dp"
+        android:layout_height="34dp"
+        android:text="@string/btnSet"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/hDivider3"
+        app:layout_constraintEnd_toStartOf="@+id/btnReset3"
+        app:layout_constraintStart_toEndOf="@+id/divider" />
+
+    <EditText
+        android:id="@+id/textInput4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:hint="@string/minutes"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:maxLength="4"
+        android:textAlignment="center"
+        android:textColor="@color/colorPink"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnStartStop4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/divider"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCountDown4" />
+
+    <EditText
+        android:id="@+id/textInput3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:hint="@string/minutes"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:maxLength="4"
+        android:textAlignment="center"
+        android:textColor="@color/colorPink"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnStartStop3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/divider"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCountDown3" />
+
+    <TextView
+        android:id="@+id/textViewCountDown3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/defaultTimer"
+        android:textColor="@color/colorGreen"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toTopOf="@+id/textInput3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/divider"
+        app:layout_constraintTop_toBottomOf="@+id/hDivider2" />
+
+    <TextView
+        android:id="@+id/textViewCountDown4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/defaultTimer"
+        android:textColor="@color/colorGreen"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toTopOf="@+id/textInput4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/divider"
+        app:layout_constraintTop_toBottomOf="@+id/hDivider3" />
+
+    <TextView
+        android:id="@+id/textViewCountDown2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/defaultTimer"
+        android:textColor="@color/colorGreen"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toTopOf="@+id/textInput2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toEndOf="@+id/divider"
+        app:layout_constraintTop_toBottomOf="@+id/hDivider1" />
+
+    <EditText
+        android:id="@+id/textInput2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:hint="@string/minutes"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:maxLength="4"
+        android:textAlignment="center"
+        android:textColor="@color/colorPink"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnStartStop2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/divider"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCountDown2" />
+
+    <Button
+        android:id="@+id/btnStartStop2"
+        android:layout_width="65dp"
+        android:layout_height="34dp"
+        android:text="@string/btnStart"
+        android:textAlignment="center"
+        android:textColor="@color/colorGreen"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/hDivider2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnReset2" />
+
+    <Button
+        android:id="@+id/btnReset2"
+        android:layout_width="65dp"
+        android:layout_height="34dp"
+        android:text="@string/btnReset"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/hDivider2"
+        app:layout_constraintEnd_toStartOf="@+id/btnStartStop2"
+        app:layout_constraintStart_toEndOf="@+id/btnSetTimer2" />
+
+    <Button
+        android:id="@+id/btnSetTimer2"
+        android:layout_width="50dp"
+        android:layout_height="34dp"
+        android:text="@string/btnSet"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/hDivider2"
+        app:layout_constraintEnd_toStartOf="@+id/btnReset2"
+        app:layout_constraintStart_toEndOf="@+id/divider" />
+
+
+    <TextView
+        android:id="@+id/tvName2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="@string/name"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/hDivider2"
+        app:layout_constraintEnd_toStartOf="@+id/divider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTotalTime2" />
+
+    <Chronometer
+        android:id="@+id/chronometer2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorGreen"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toStartOf="@+id/divider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hDivider1" />
+
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.50" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.75" />
+
+    <View
+        android:id="@+id/hDivider2"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+    <View
+        android:id="@+id/divider"
+        android:layout_width="4dp"
+        android:layout_height="match_parent"
+        android:background="@color/colorGreen"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/hDivider1"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/hDivider3"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintBottom_toTopOf="@+id/guideline7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnEdit1"
+        android:layout_width="66dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/btnEdit"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Chronometer
+        android:id="@+id/chronometer1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorGreen"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvTotalTime1"
+        app:layout_constraintEnd_toStartOf="@+id/divider"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewCountDown1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/defaultTimer"
+        android:textColor="@color/colorGreen"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toTopOf="@+id/textInput1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toEndOf="@+id/divider"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnSetTimer1"
+        android:layout_width="50dp"
+        android:layout_height="34dp"
+        android:text="@string/btnSet"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/hDivider1"
+        app:layout_constraintEnd_toStartOf="@+id/btnReset1"
+        app:layout_constraintStart_toEndOf="@+id/divider" />
+
+    <Button
+        android:id="@+id/btnReset1"
+        android:layout_width="65dp"
+        android:layout_height="34dp"
+        android:text="@string/btnReset"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/hDivider1"
+        app:layout_constraintEnd_toStartOf="@+id/btnStartStop1"
+        app:layout_constraintStart_toEndOf="@+id/btnSetTimer1" />
+
+    <Button
+        android:id="@+id/btnStartStop1"
+        android:layout_width="65dp"
+        android:layout_height="34dp"
+        android:text="@string/btnStart"
+        android:textAlignment="center"
+        android:textColor="@color/colorGreen"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/hDivider1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnReset1" />
+
+    <TextView
+        android:id="@+id/tvName1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="@string/name"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/hDivider1"
+        app:layout_constraintEnd_toStartOf="@+id/divider"
+        app:layout_constraintHorizontal_bias="0.50"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTotalTime1" />
+
+    <EditText
+        android:id="@+id/textInput1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:hint="@string/minutes"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:maxLength="4"
+        android:textAlignment="center"
+        android:textColor="@color/colorPink"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnSetTimer1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/divider"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCountDown1" />
+
+    <TextView
+        android:id="@+id/tvTotalTime1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/TotalTime"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="8sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tvName1"
+        app:layout_constraintEnd_toStartOf="@+id/divider"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chronometer1" />
+
+    <TextView
+        android:id="@+id/tvTotalTime2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/TotalTime"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="8sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tvName2"
+        app:layout_constraintEnd_toStartOf="@+id/divider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chronometer2" />
+
+    <TextView
+        android:id="@+id/tvTotalTime3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/TotalTime"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="8sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tvName3"
+        app:layout_constraintEnd_toStartOf="@+id/divider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chronometer3" />
+
+    <TextView
+        android:id="@+id/tvTotalTime4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/TotalTime"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="8sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tvName4"
+        app:layout_constraintEnd_toStartOf="@+id/divider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chronometer4" />
+
+    <TextView
+        android:id="@+id/tvControl1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/control"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="8sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvControl2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/control"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="8sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hDivider1" />
+
+    <TextView
+        android:id="@+id/tvControl4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/control"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="8sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hDivider3" />
+
+    <TextView
+        android:id="@+id/tvControl3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/control"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="8sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hDivider2" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

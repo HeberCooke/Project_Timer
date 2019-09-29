@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">TimerV3.3</string>
+    <string name="Coundown">Count Down Timer</string>
+    <string name="TotalTime">Total Time</string>
+    <string name="btnStart">Start</string>
+    <string name="btnPause">Pause</string>
+    <string name="btnReset">Reset</string>
+    <string name="btnEdit">Edit</string>
+    <string name="btnDelete">Delete Timer</string>
+    <string name="txtEnterMin">Enter Minutes</string>
+    <string name="btnSet">Set</string>
+    <string name="defaultTimer">00:00</string>
+    <string name="minutes">Minutes</string>
+    <string name="name">Name</string>
+    <string name="enterTimerName">Rename Timer</string>
+    <string name="btnSave">Save</string>
+    <string name="btnReturn">Return</string>
+    <string name="rb1">rename #1</string>
+    <string name="rb2">rename #2</string>
+    <string name="rb3">rename #3</string>
+    <string name="rb4">rename #4</string>
+    <string name="notes">Notes</string>
+    <string name="n122">n</string>
+    <string name="rbReset1">Reset #1</string>
+    <string name="btnReset2">Reset #2</string>
+    <string name="btnReset3">Reset #3</string>
+    <string name="btnReset4">Reset #4</string>
+    <string name="btnBack">Back</string>
+    <string name="totalTime">Total Time :</string>
+    <string name="control">Timer Control</string>
+</resources>
