@@ -18,6 +18,64 @@ Edit activity
 Notes activity
 ![](img/notes.png)
 ---
+
+---
+#### Code that I used to save instance state
+```
+    @Override
+    protected void onStop(){
+       super.onStop();
+        SharedPreferences prefs = getSharedPreferences("prefs",MODE_PRIVATE);
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putString("name1",name1);
+        editor.putLong("startTimeInMillis1", startTimeMilliseconds1);
+        editor.putLong("millisLeft1", timeLeftMilliseconds1);
+        editor.putBoolean("timerRunning1", timerIsRunning1);
+        editor.putLong("endTime1", endTime1);
+        editor.putLong("chro1",chrono1Time);
+        editor.apply();
+        if(countDownTimer1 != null){
+            countDownTimer1.cancel();
+        }
+  }  
+  
+```
+#### Code I used to restore instance state
+```
+    @Override
+    protected void onStart(){
+        super.onStart();
+
+        SharedPreferences prefs = getSharedPreferences("prefs",MODE_PRIVATE);
+        startTimeMilliseconds1 = prefs.getLong("startTimeInMillis1",600000);
+        timeLeftMilliseconds1 = prefs.getLong("millisLeft1", startTimeMilliseconds1);
+        timerIsRunning1 = prefs.getBoolean("timerRunning1",false);
+        chrono1Time = prefs.getLong("chro1",0);
+        //This resets total time if check box in edit is checked
+        if(ch1){
+            chronometer1.setBase(SystemClock.elapsedRealtime());
+            chrono1Time = 0;
+        }
+        else{
+            chronometer1.setBase(SystemClock.elapsedRealtime() + chrono1Time );
+        }
+        updateCountDownText1();
+        updateWatchInterface1();
+        if(timerIsRunning1){
+            endTime1 = prefs.getLong("endTime",0);
+            timeLeftMilliseconds1 = endTime1 - System.currentTimeMillis();
+            if(timeLeftMilliseconds1 < 0){
+                timeLeftMilliseconds1 = 0;
+                timerIsRunning1 = false;
+                updateCountDownText1();
+                updateWatchInterface1();
+            }
+            else{
+              startTimer1();
+            }
+        }
+```
+---
 #### Why I created this timer 
 - I wanted to create a timer because I am always curious of how much time I spend on certin tasks.
 - I created the timer to get more experiance with java and xml 
